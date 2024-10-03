@@ -9,5 +9,23 @@
 </head>
 <body>
   <app-root></app-root>
+  <!-- Add this just before the closing </body> tag -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+    import { getMessaging } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-messaging.js';
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCZ02oVFFvCXGIVhGa8X9tYW0CEpoHel24",
+      authDomain: "cleaning-tracking-fe2c5.firebaseapp.com",
+      projectId: "cleaning-tracking-fe2c5",
+      storageBucket: "cleaning-tracking-fe2c5.appspot.com",
+      messagingSenderId: "23263013376",
+      appId: "1:23263013376:web:1d0b32a30eb673af0b86e5",
+      measurementId: "G-LJ50HBY5CY"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+  </script>
 </body>
 </html>

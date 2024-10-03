@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MessagingService } from './services/messaging.service';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -6,8 +7,16 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'CleaningTrackerApp';
+
+  constructor(private messagingService: MessagingService) {}
+
+  ngOnInit() {
+    this.messagingService.requestPermission();
+    // Note: subscribing to topics is typically done server-side
+    // this.messagingService.subscribeToTopic('wash_reminders');
+  }
 }

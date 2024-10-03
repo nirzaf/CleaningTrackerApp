@@ -1,0 +1,10 @@
+<h2>Wash Dashboard</h2>
+<p>Total washes this cycle: {{ totalWashes }}</p>
+<button (click)="logWashSession()">Log Wash Session</button>
+
+<h3>Wash Sessions</h3>
+<ul>
+  <li *ngFor="let session of washSessions$ | async">
+    {{ session.date | date }} - {{ session.status }}
+  </li>
+</ul>
