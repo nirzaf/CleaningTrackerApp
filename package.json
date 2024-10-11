@@ -23,7 +23,7 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.7",
     "@firebasegen/default": "file:generated/javascript/default",
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "firebase": "^10.14.0",
     "glob": "^10.2.2",
     "lru-cache": "^7.14.1",
